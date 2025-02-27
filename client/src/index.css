@@ -110,6 +110,7 @@ button:focus-visible {
 
 .home-container {
   margin-top: 300px;
+  width: 100%;
 }
 
 .masthead-container {
@@ -150,4 +151,3 @@ button:focus-visible {
   /* font-size: 1.25rem;  */
   margin-bottom: 10px;
 }
-

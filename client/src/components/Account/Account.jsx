@@ -23,7 +23,6 @@ export default function Account() {
       <div className="container">
         <h3>
           Welcome {user.firstName} {user.lastName}
-
         </h3>
         <h6>{user.email}</h6>
         <hr></hr>
@@ -34,12 +33,25 @@ export default function Account() {
               user?.recipes?.slice(0, 3).map((rec) => (
                 <div className="col-4" key={rec.id}>
                   <div className="card h-100" style={{ padding: "0" }}>
-                    {user?.recipes?.photo ? (
-                      <img src={rec.photo} className="card-img-top" />
+                    {rec.photo ? (
+                      <img
+                        src={rec.photo}
+                        className="card-img-top"
+                        style={{
+                          width: "100%",
+                          height: "250px",
+                          objectFit: "cover",
+                        }}
+                      />
                     ) : (
                       <img
                         src="https://placehold.co/600x600?text=No+Photo+Available"
                         className="card-img-top"
+                        style={{
+                          width: "100%",
+                          height: "250px",
+                          objectFit: "cover",
+                        }}
                       />
                     )}
 
@@ -82,14 +94,27 @@ export default function Account() {
         <div>
           <div className="row g-2">
             {user?.favorites?.slice(0, 3).map((fav) => (
-              <div className="col-4" key={fav.id}>
+              <div className="col-md-4" key={fav.id}>
                 <div className="card h-100" style={{ padding: "0" }}>
                   {fav?.recipe?.photo ? (
-                    <img src={fav.recipe.photo} className="card-img-top" />
+                    <img
+                      src={fav.recipe.photo}
+                      className="card-img-top"
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
+                    />
                   ) : (
                     <img
                       src="https://placehold.co/600x600?text=No+Photo+Available"
                       className="card-img-top"
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
                     />
                   )}
 

@@ -47,6 +47,11 @@ export default function Account() {
                     src={fav.recipe.photo}
                     className="img-fluid rounded-start"
                     alt={fav.recipe.name}
+                    style={{
+                      width: "100%",
+                      height: "200px",
+                      objectFit: "cover",
+                    }}
                   ></img>
                 </div>
                 <div className="col-md-8">

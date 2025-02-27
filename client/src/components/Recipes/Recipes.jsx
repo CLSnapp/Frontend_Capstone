@@ -73,14 +73,30 @@ export default function Recipes() {
         <div>
           <div className="row g-2">
             {currentItems?.map((recipe) => (
-              <div className="col-4" key={recipe.id}>
-                <div className="card h-100" style={{ padding: "0" }}>
+              <div className="col" key={recipe.id}>
+                <div
+                  className="card h-100"
+                  style={{ padding: "0", width: "18rem" }}
+                >
                   {recipe?.photo ? (
-                    <img src={recipe.photo} className="card-img-top" />
+                    <img
+                      src={recipe.photo}
+                      className="card-img-top"
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
+                    />
                   ) : (
                     <img
                       src="https://placehold.co/600x600?text=No+Photo+Available"
                       className="card-img-top"
+                      style={{
+                        width: "100%",
+                        height: "250px",
+                        objectFit: "cover",
+                      }}
                     />
                   )}
 
