@@ -200,6 +200,9 @@ export default function SingleRecipe() {
   const favoriteCount = Array.isArray(recipeArr?.favoritedBy)
     ? recipeArr.favoritedBy.length
     : 0;
+    
+    console.log("loggg", recipeArr?.instructions);
+
 
   return (
     <>
@@ -381,6 +384,7 @@ export default function SingleRecipe() {
                     <h5>Instructions</h5>
                     <ol className="list-group list-group-flush list-group-numbered">
                       {recipeArr?.instructions?.map((inst) => {
+                        console.log(inst);
                         return (
                           <li key={inst.id} className="list-group-item">
                             {" "}
